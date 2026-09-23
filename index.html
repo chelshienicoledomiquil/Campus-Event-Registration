@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Event Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Campus Event Registration</h1>
+      <p class="subtitle">Register for our campus event and receive your confirmation by email.</p>
+
+      <form id="eventForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="eventDate">Event Date</label>
+        <input type="date" id="eventDate" name="eventDate" required>
+
+        <label for="city">Event City</label>
+        <input type="text" id="city" name="city" placeholder="Example: Naga City" required>
+
+        <label for="attendees">Number of Attendees</label>
+        <input type="number" id="attendees" name="attendees" min="1" max="10" value="1" required>
+
+        <button type="button" id="checkWeatherBtn">Check Event Weather</button>
+
+        <div id="weatherBox" class="weather-box hidden">
+          <h3>Event Weather</h3>
+          <p id="weatherText">Weather information will appear here.</p>
+        </div>
+
+        <button type="submit" id="submitBtn">Confirm Registration</button>
+        <p id="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
